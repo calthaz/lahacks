@@ -65,6 +65,21 @@ def find_match(userA, users):
     return bestOption
 
 
+from sys import *
+def add_points(file):
+    Open_file = open(file, 'r')
+    score = Open_file.strip()
+    value = int(score)
+    new  = value + 1
+    file2 = replace(file, score, new)
+    newFile = open(file,'w')
+    newFile.write(file2)
+    return newFile
+
+
+def replace(file, score, new)
+    file = file.replace(score, new)
+    return file
 
 
 
