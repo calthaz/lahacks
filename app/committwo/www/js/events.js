@@ -25,7 +25,7 @@ $(function(){
             });
         */
         $.ajax({
-            url: 'http://ec2-34-208-42-160.us-west-2.compute.amazonaws.com/committwo/server/foursquare2.cgi',//../../../server/foursquare2.cgi',  
+            url: '../../../server/foursquare2.cgi',//'http://ec2-34-208-42-160.us-west-2.compute.amazonaws.com/committwo/server/foursquare2.cgi',//../../../server/foursquare2.cgi',  
             type: 'POST',
             data: {lon:lon, lat:lat, cat:cat},
             crossDomain: true,

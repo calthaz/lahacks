@@ -7,7 +7,8 @@ import requests
 
 cgitb.enable()  # for troubleshooting
 
-print("Content-type: text/html\n\n")
+print("Content-type: text/html")
+print("Access-Control-Allow-Origin: * \n\n")
 '''
 print()
 
