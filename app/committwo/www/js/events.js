@@ -25,7 +25,7 @@ $(function(){
             });
         */
         $.ajax({
-            url: '../../../server/foursquare2.cgi',//'http://ec2-34-208-42-160.us-west-2.compute.amazonaws.com/committwo/server/foursquare2.cgi',//../../../server/foursquare2.cgi',  
+            url: 'http://ec2-34-208-42-160.us-west-2.compute.amazonaws.com/committwo/server/foursquare2.cgi',//../../../server/foursquare2.cgi',  
             type: 'POST',
             data: {lon:lon, lat:lat, cat:cat},
             crossDomain: true,
@@ -105,7 +105,7 @@ $(function(){
         
         $(".card.venueBlock").remove();
         $.ajax({
-            url: '../../../server/addpoints.cgi',  
+            url: 'http://ec2-34-208-42-160.us-west-2.compute.amazonaws.com/committwo/server/addpoints.cgi', //'../../../server/addpoints.cgi',  
             type: 'POST',
             data: {scorefile:currentScoreFile},
             cache: false,
