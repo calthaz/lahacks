@@ -71,7 +71,7 @@
           <h2 class="mb-5">About</h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Points: <span id="my-points">0</span></h3>
+              <h3 class="mb-0">Points: <span id="my-points">?</span></h3>
               <div id="demo-cat-radio" class="form-group">
                 <label>Now select a Category </label><br>           
                 <input type="radio" name = "cat" value="fitness">
@@ -87,19 +87,19 @@
                   <div class="card venueBlock">
                     <div class="venueDetails card-body">
                       <div class="venueName">
-                        <h2><a>CVS/pharmacy</a></h2>
+                        <h2><a>{{name}}</a></h2>
                       </div>
                       <div class="venueMeta">
                         <div class="venueAddressData">
-                          <div class="venueDistance">8490 m</div>
-                          <div class="venueAddress">8490 Beverly Blvd (La Cienega Blvd), 洛杉矶</div>
+                          <div class="venueDistance">{{distance}} m</div>
+                          <div class="venueAddress">{{address}}</div>
                           <div class="venueData">
                             <span class="venueDataItem">
-                              <span class="categoryName">Pharmacy</span>
+                              <span class="categoryName">{{category}}</span>
                               <span class="delim"> • </span>
                             </span>
-                            <a class="deny-location">Not where I am.</a>
-                            <a class="accept-location">I'm here!</a>
+                            <a class="deny-location text-secondary">Not where I am.</a>
+                            <a class="accept-location text-primary">I'm here!</a>
                           </div>
                         </div>
                       </div>
