@@ -22,7 +22,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/resume.css" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' href='css/stylesheet.css'/>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
   </head>
 
   <body id="page-top">
@@ -72,12 +72,11 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Some text Some text Some text Some text Some text</h3><br>
-              <h3 class="mb-0">password: {}</h4><br>
-              <h3 class="mb-0">points: {}</h5>
-              <h3 class="mb-0">available rewards: {}</h6><br>
-              <input type='button' name='collect' value='Collect Reward' /><br>
+              <h3 class="mb-0">password: {}</h3><br>
+              <h3 class="mb-0">points: {}</h3>
+              <h3 class="mb-0">available rewards: {}</h3><br>
               <div class="col-xs-12" style="height:20px;"></div>
-          </div>
+			  </div></div></div>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="login">
@@ -87,16 +86,16 @@
             <div class="resume-content mr-auto">
               <div class="form-group">
                 <label>Email</label>
-                <input id="login-email" type="transparent" class="form-control" placeholder="Enter Username" name="email" required>
+                <input id="login-email" type="email" class="form-control" placeholder="Enter Username" name="email" required>
               </div>
               <div class="form-group">
                 <label>Password</label>
-                <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
+                <input id="login-password" type="password" class="form-control" placeholder="Enter Password" name="password" required>
               </div>
-              <button type="button" class="btn btn-secondary">Forgot password?</button>
-              <button id="submit-login" type="button" class="btn btn-primary">Submit</button>
+              <button id = "login-forgot-pwd" type="button" class="btn btn-secondary">Forgot password?</button>
+              <button id="login-submit" type="button" class="btn btn-primary">Submit</button>
               <div class="col-xs-12" style="height:20px;"></div>
-          </div>
+			  </div></div></div>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="register">
@@ -107,8 +106,8 @@
                 <h4 class="info-text"> Let's start with a photo</h4>                 
                 <div class="picture-container">
                   <div class="picture">
-                      <img src="assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
-                      <input type="file" id="wizard-picture">
+                      <img src="assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title="" alt ="" />
+                      <input type="file" id="register-portrait-submit">
                   </div>
                   <h6>Choose Picture</h6>
                 </div>
@@ -118,16 +117,18 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="form-group">
               <label>First Name <small>(required)</small></label>
-              <input id="register" name="personal" type="text" class="form-control" placeholder="Andrew...">
+              <input id="register-firstname" name="firstname" type="text" class="form-control" placeholder="Andrew...">
             </div>
             <div class="form-group">
               <label>Last Name <small>(required)</small></label>
-              <input name="personal" type="text" class="form-control" placeholder="Smith...">
+              <input id="register-lastname" name="lastname" type="text" class="form-control" placeholder="Smith...">
             </div>                          
             <div class="form-group">
                 <label>Email <small>(required)</small></label>
-                <input name="personal" type="email" class="form-control" placeholder="andrew@example.com">
+                <input id="register-email" name="email" type="email" class="form-control" placeholder="andrew@example.com">
             </div>
+			  
+		</div>
             <!--                 
             <div class="tab-pane" id="account">
                 <h4 class="info-text"> Select a goal </h4>
@@ -140,20 +141,20 @@
                 </div>
             </div>
                 -->
-          </div>
+          
           <h4 class="info-text"> Information that helps us to find a partner for you</h4>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Your zip code</label>
-                  <input name= "zip-code" type="text" class="form-control">
+                  <input id="register-zip" name= "zip-code" type="text" class="form-control">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="phone-number">Phone number</label>
-                  <input type="text" class="form-control" id="phone-number" placeholder="Password">
+                  <input id="register-phone" name = "phone_num" type="text" class="form-control" placeholder="123-456-7890">
                 </div>
               </div>
-              <div class="form-group">
+              <div id="register-age-radio" class="form-group">
                 <label>Now select your age </label><br>
                 
                 <input type="radio" name = "age" value="18-24">
@@ -162,13 +163,13 @@
                 <label>25-35</label><br>
                 <input type="radio" name = "age" value="36-50">
                 <label>36-50</label><br>
-                <input type = "radio" name = "age" value = "50+">
+                <input type="radio" name = "age" value = "50+">
                 <label>50+</label><br>
                 
               </div>
 
-          </div>
-          <button id="submit-login" type="button" class="btn btn-primary">Submit</button>
+			</div></div>
+          <button id="register-submit" type="button" class="btn btn-primary">Submit</button>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="manage-account">
@@ -177,13 +178,15 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">username: {}</h3><br>
-              <h3 class="mb-0">password: {}</h4><br>
-              <h3 class="mb-0">points: {}</h5>
-              <h3 class="mb-0">available rewards: {}</h6><br>
-              <input type='button' name='collect' value='Collect Reward' /><br>
+              <h3 class="mb-0">password: {}</h3><br>
+              <h3 class="mb-0">points: {}</h3>
+              <h3 class="mb-0">available rewards: {}</h3><br>
+              <input id="reward-button" type="button" name="collect" value="Collect Reward" /><br>
               <div class="col-xs-12" style="height:20px;"></div>
-              <input type = "button" name ="end friendship" value = "End Friendship"/>
-          </div>
+              <input id="unfriend-button" type = "button" name ="end friendship" value = "End Friendship"/>
+          	</div>
+		  </div>
+		 </div>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="friends">
@@ -191,7 +194,7 @@
           <h2 class="mb-5">Your Friends</h2>
           <h4 class = "mb-0">Message to {} </h4>
           <textarea rows="8" cols="50"></textarea><br>
-          <input type = "button" name ="message" value ="Send"/>
+          <input id="message-send-button" type = "button" name ="message" value ="Send"/>
         </div>
       </section>
 
@@ -201,44 +204,44 @@
           <div id="goal-form">
             <div class="form-group">
               <label for="inputAddress">Title</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              <input id="goal-title" type="text" class="form-control" placeholder="1234 Main St">
             </div>
             <div class="form-group">
               <label for="inputAddress2">Description</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              <input id="goal-description" type="text" class="form-control" placeholder="Apartment, studio, or floor">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Time</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <input id="goal-time" type="number" class="form-control" placeholder="Email">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputPassword4">Date</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                <input id="goal-date" type="text" class="form-control" placeholder="Password">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input id="goal-city" type="text" class="form-control" >
               </div>
               <div class="form-group col-md-4">
                 <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
+                <select id="goal-state" class="form-control">
                   <option selected>Choose...</option>
                   <option>...</option>
                 </select>
               </div>
               <div class="form-group col-md-2">
                 <label for="inputZip">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
+                <input id="goal-zip" type="text" class="form-control" >
               </div>
             </div>
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <input id="marketing-checkbox" class="form-check-input" type="checkbox">
                 <label class="form-check-label" for="gridCheck">
-                  Check me out
+                  I would like to receive information regarding your awesome app!
                 </label>
               </div>
             </div>
@@ -292,6 +295,7 @@
               </div>
             </div>    
           </div>
+		 </div>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
@@ -383,7 +387,6 @@
               <i class="fa-li fa fa-trophy text-warning"></i>
               2<sup>nd</sup>
               Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-            <li>
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
               1<sup>st</sup>
