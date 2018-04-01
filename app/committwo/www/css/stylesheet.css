@@ -1,0 +1,28 @@
+head {
+  font-family: "Saira Extra Condensed" monospace;
+}
+input[name="username"] {
+  background: rgba(255, 255, 255, 0.35);
+  position: relative;
+  display: block;
+}
+input[name="password"] {
+  background: rgba(255, 255, 255, 0);
+  position: relative;
+  display: block;
+  float: center;
+}
+h3 {
+  color: #a58264;
+}
+body {
+  font-family: "Saira Extra Condensed" monospace;
+}
+label[for="password"] {
+  color: #09370e;
+}
+input[name="personal"] {
+  background: rgba(255, 255, 255, 0.6);
+  position: relative;
+  display: block;
+}

@@ -1,36 +1,413 @@
-<!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
-
+<!DOCTYPE html>
 <html lang="en">
+
   <head>
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Bridge the Digital Gap">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>GapTalk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>CommitTwo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='css/stylesheet.css'/>
   </head>
-  <body id='index'>
-      	
-      	<!-- anchor -->
-        <a name="top"></a>
-          <div class="logo-font gt-slogan">Mind the Gap.</div>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">CommitTwo</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#manage-account">Manage Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#friends">Friends</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#create-goal">Create Goal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#current-goals">Current Goals</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="about">
+        <div class="my-auto">
+          <h2 class="mb-5">About</h2>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Some text Some text Some text Some text Some text</h3><br>
+              <h3 class="mb-0">password: {}</h4><br>
+              <h3 class="mb-0">points: {}</h5>
+              <h3 class="mb-0">available rewards: {}</h6><br>
+              <input type='button' name='collect' value='Collect Reward' /><br>
+              <div class="col-xs-12" style="height:20px;"></div>
+          </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="login">
+        <div class="my-auto">
+          <h2 class="mb-5">Login</h2>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <div class="form-group">
+                <label>Email</label>
+                <input id="login-email" type="transparent" class="form-control" placeholder="Enter Username" name="email" required>
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
+              </div>
+              <button type="button" class="btn btn-secondary">Forgot password?</button>
+              <button id="submit-login" type="button" class="btn btn-primary">Submit</button>
+              <div class="col-xs-12" style="height:20px;"></div>
+          </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="register">
+        <div class="my-auto">
+          <h2 class="mb-5">Register</h2>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+                <h4 class="info-text"> Let's start with a photo</h4>                 
+                <div class="picture-container">
+                  <div class="picture">
+                      <img src="assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
+                      <input type="file" id="wizard-picture">
+                  </div>
+                  <h6>Choose Picture</h6>
+                </div>
+            </div>
+          </div>
+            <h4>Basic Information</h4>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="form-group">
+              <label>First Name <small>(required)</small></label>
+              <input id="register" name="personal" type="text" class="form-control" placeholder="Andrew...">
+            </div>
+            <div class="form-group">
+              <label>Last Name <small>(required)</small></label>
+              <input name="personal" type="text" class="form-control" placeholder="Smith...">
+            </div>                          
+            <div class="form-group">
+                <label>Email <small>(required)</small></label>
+                <input name="personal" type="email" class="form-control" placeholder="andrew@example.com">
+            </div>
+            <!--                 
+            <div class="tab-pane" id="account">
+                <h4 class="info-text"> Select a goal </h4>
+                <div class="row">
+
+                    <div class="choice" data-toggle="wizard-checkbox">
+                        <input type="checkbox" name="task" value="nutrition">
+                        <label>Become a healthier eater</label>
+                    </div>
+                </div>
+            </div>
+                -->
+          </div>
+          <h4 class="info-text"> Information that helps us to find a partner for you</h4>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>Your zip code</label>
+                  <input name= "zip-code" type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="phone-number">Phone number</label>
+                  <input type="text" class="form-control" id="phone-number" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Now select your age </label><br>
+                
+                <input type="radio" name = "age" value="18-24">
+                <label>18-24</label><br>
+                <input type="radio" name = "age" value="25-35">
+                <label>25-35</label><br>
+                <input type="radio" name = "age" value="36-50">
+                <label>36-50</label><br>
+                <input type = "radio" name = "age" value = "50+">
+                <label>50+</label><br>
+                
+              </div>
+
+          </div>
+          <button id="submit-login" type="button" class="btn btn-primary">Submit</button>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="manage-account">
+        <div class="my-auto">
+          <h2 class="mb-5">Manage Account</h2>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">username: {}</h3><br>
+              <h3 class="mb-0">password: {}</h4><br>
+              <h3 class="mb-0">points: {}</h5>
+              <h3 class="mb-0">available rewards: {}</h6><br>
+              <input type='button' name='collect' value='Collect Reward' /><br>
+              <div class="col-xs-12" style="height:20px;"></div>
+              <input type = "button" name ="end friendship" value = "End Friendship"/>
+          </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="friends">
+        <div class="my-auto">
+          <h2 class="mb-5">Your Friends</h2>
+          <h4 class = "mb-0">Message to {} </h4>
+          <textarea rows="8" cols="50"></textarea><br>
+          <input type = "button" name ="message" value ="Send"/>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="create-goal">
+        <div class="my-auto">
+          <h2 class="mb-5">Create A Goal</h2>
+          <div id="goal-form">
+            <div class="form-group">
+              <label for="inputAddress">Title</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Description</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Time</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Date</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="current-goals">
+        <div class="my-auto">
+          <h2 class="mb-5">Current Goals</h2>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="card mb-3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>  
+            <div class="card mb-3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>   
+            <div class="card mb-3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>    
+          </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline list-icons">
+            <li class="list-inline-item">
+              <i class="devicons devicons-html5"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-css3"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-javascript"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-jquery"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-sass"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-less"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-bootstrap"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-wordpress"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-grunt"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-gulp"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-npm"></i>
+            </li>
+          </ul>
+
+          <div class="subheading mb-3">Workflow</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Mobile-First, Responsive Design</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Cross Browser Testing &amp; Debugging</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Cross Functional Teams</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Agile Development &amp; Scrum</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+        <div class="my-auto">
+          <h2 class="mb-5">Interests</h2>
+          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+        <div class="my-auto">
+          <h2 class="mb-5">Awards &amp; Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Google Analytics Certified Developer</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Mobile Web Specialist - Google Certification</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              2<sup>nd</sup>
+              Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
+            <li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - James Buchanan High School - Hackathon 2006</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              3<sup>rd</sup>
+              Place - James Buchanan High School - Hackathon 2005</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
 
   </body>
-  <script src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/usertest.js"></script>
+
 </html>
