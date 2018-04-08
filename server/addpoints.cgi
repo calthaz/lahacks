@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 #!D:\Python\Python36\python.exe 
 
 from sys import *
@@ -39,7 +41,8 @@ r = ""
 scorefile = '';
 ret = {}
 
-print("Content-type: text/html\n\n")
+print("Content-type: text/html")
+print("Access-Control-Allow-Origin: *\n\n")
 #print(add_points("storage/score.txt"))
 for key in form.keys():
     variable = str(key)

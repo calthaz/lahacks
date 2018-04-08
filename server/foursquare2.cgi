@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 #!D:\Python\Python36\python.exe 
 
 import cgi
@@ -8,7 +10,7 @@ import requests
 cgitb.enable()  # for troubleshooting
 
 print("Content-type: text/html")
-print("Access-Control-Allow-Origin: * \n\n")
+print("Access-Control-Allow-Origin: *\n\n")
 '''
 print()
 
