@@ -19,18 +19,7 @@ var UserService = function(){
 	this.initialize=function(){
 		var deferred = $.Deferred();
 		//ajax recheck user
-		var curSettings = {
-			searchMethod:1,
-			preprocessing:3,
-			maxPatchSize:1250,
-			maxAmRate:2,
-			maxFolds:2,
-			centerX:0.5,
-			centerY:0.5,
-			searchW:0.2,
-			searchH:0.2,
-			probFunc:1,
-		};
+		
 		this.emptyUser = {
 			name:"",
 			email:"",
@@ -66,15 +55,6 @@ var UserService = function(){
 			this.currentUser=JSON.parse(window.localStorage.getItem("committwoUser"));
 			//cl("add user");
 		}
-		/*if(window.localStorage.getItem("userSettings")){
-			//this.currentUser=JSON.parse(window.localStorage.getItem("committwoUser"));
-			//Er, use this to display the settings form
-			//cl("Has user settings");
-		}else{
-			window.localStorage.setItem("userSettings", JSON.stringify(defaultSettings));
-			//this.currentUser=JSON.parse(window.localStorage.getItem("committwoUser"));
-			//cl("add settings");
-		}*/
 		deferred.resolve();
         return deferred.promise();
 	};

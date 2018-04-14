@@ -9,7 +9,7 @@
 	$username = "committwo";
 	$password = "committwo2018";
 	$dbname = "committwo";
-
+	//table names
 	$goal_t = "goals";
 	$user_t = "users";
 	$usersetting_t = "usersettings"; 

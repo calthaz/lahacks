@@ -16,10 +16,11 @@ if((isset($_GET["pw"])) && $_GET["pw"]==="arugvj132kuy"){
     gid INT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     title VARCHAR(200) NOT NULL,
     description TEXT, 
-    owner_id INT(10) NOT NULL , 
-    time VARCHAR(50) NOT NULL , 
+    owner_id INT(10) NOT NULL,
+    status INT(10) NOT NULL, 
+    time VARCHAR(50) NOT NULL, 
     date VARCHAR(100) NOT NULL,
-    location VARCHAR(100) NULL , 
+    location VARCHAR(100) NULL, 
     frequency VARCHAR(50) NOT NULL DEFAULT  1, 
     creat_date VARCHAR(50) NOT NULL, 
     pic_url VARCHAR(200) DEFAULT '".$default_goal_pic."') "; 
@@ -32,7 +33,7 @@ if((isset($_GET["pw"])) && $_GET["pw"]==="arugvj132kuy"){
     }
     /* sql to create table*/
     $sql = "CREATE TABLE ".$user_t." (
-    uid INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+        uid INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     email VARCHAR(50) UNIQUE,
     username VARCHAR(30) NOT NULL,
     password VARCHAR(200) NOT NULL,
@@ -41,12 +42,13 @@ if((isset($_GET["pw"])) && $_GET["pw"]==="arugvj132kuy"){
     age VARCHAR(10),
     gender INT(10),
     zip_code INT(6),
-    phone_num VARCHAR(50), 
-    reg_date VARCHAR(50),
+    phone_num VARCHAR(50),
+    points INT(10) DEFAULT 0,
+    reg_date VARCHAR(50), 
     type VARCHAR(10) DEFAULT 0,
     profile_pic_url VARCHAR(200) DEFAULT '".$default_profile_pic."', 
-    goal_list TEXT,
-    friend_list TEXT,
+    goal_list TEXT, 
+    friend_list TEXT, 
     history VARCHAR(200)
     )";
     //Note: backslashes doesn't work
